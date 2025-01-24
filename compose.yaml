@@ -1,0 +1,24 @@
+services:
+  server:
+    build:
+      context: ./TestServerRAG
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    networks:
+      - app-network
+    env_file:
+      - ./TestServerRAG/.env
+    
+  client:
+    build:
+      context: ./TestClientRAG
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    networks:
+      - app-network
+
+networks:
+ app-network:
+  driver: bridge
