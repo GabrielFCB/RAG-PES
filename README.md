@@ -27,9 +27,12 @@ cp TestServerRAG/.env.example TestServerRAG/.env
 
 Abra o arquivo .env e insira os valores das suas chaves:
 
+```bash
 LANGCHAIN_API_KEY=<sua_chave_langchain>
 OPENAI_API_KEY=<sua_chave_openai>
 PINECONE_API_KEY=<sua_chave_pinecone>
+```
+
 ⚠️ Nota: O arquivo .env está listado no .gitignore e não será versionado no repositório.
 
 ### Configuração do Cliente
